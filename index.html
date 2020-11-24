@@ -19,13 +19,15 @@
       <main class="list-cd">
 
         <div class="filter">
-          <h3>Filter by gender:</h3>
-          <select class="type" name="">
-            <option value="">All</option>
-            <option value="">Pop</option>
-            <option value="">Rock</option>
-            <option value="">Metal</option>
-            <option value="">Jazz</option>
+          <h4>Filter by gender:</h4>
+          <select v-model="actualGen"
+                  @change="changeType"
+                  class="type" name="">
+            <option value="all">All</option>
+            <option value="pop">Pop</option>
+            <option value="rock">Rock</option>
+            <option value="metal">Metal</option>
+            <option value="jazz">Jazz</option>
           </select>
         </div>
 

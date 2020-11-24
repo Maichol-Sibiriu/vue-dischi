@@ -38,11 +38,12 @@ main{
   padding: 40px;
 }
 
-.filter select{
+.filter .type{
   margin-left: 15px;
   border-radius: 5px;
   flex-basis: 65px;
   padding-left: 5px;
+  height: 20px;
 }
 
 main ul{
