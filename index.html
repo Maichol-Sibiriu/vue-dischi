@@ -3,11 +3,48 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
   </head>
   <body>
 
    <div id="app">
+
+      <!-- logo -->
+      <header class="logo">
+       <img src="./img/logo.png" alt="">
+      </header>
+
+      <main class="list-cd">
+
+        <div class="filter">
+          <h3>Filter by gender:</h3>
+          <select class="type" name="">
+            <option value="">all</option>
+            <option value="">pop</option>
+            <option value="">rock</option>
+            <option value="">metal</option>
+            <option value="">jazz</option>
+          </select>
+        </div>
+
+        <ul v-if='listCd.length > 0'>
+          <li v-for='cd in listCd'>
+            <div class="img-cd">
+              <img :src="cd.poster" alt="">
+            </div>
+            <h4>{{ cd.title }}</h4>
+            <p class="grey">{{ cd.author }}</p>
+            <p class="grey">{{ cd.year }}</p>
+            <p>{{ cd.genre }}</p>
+          </li>
+        </ul>
+
+
+        <h2 v-else>wait loading...</h2>
+
+      </main>
 
    </div>
 
