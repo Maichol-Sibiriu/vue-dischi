@@ -32,6 +32,19 @@ main{
   background-color: #192d3c;
 }
 
+.filter{
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.filter select{
+  margin-left: 15px;
+  border-radius: 5px;
+  flex-basis: 65px;
+  padding-left: 5px;
+}
+
 main ul{
   display: flex;
   flex-wrap: wrap;
